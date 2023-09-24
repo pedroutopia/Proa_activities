@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <script>
+
+        let frutas = ["pêssego", "maça", "banana", "goiaba", "morango", "abacate"];
+
+        function listaDeCompras() {
+            while (frutas.length > 0) {
+                alert("Lista de compras: " + frutas.join(", "));
+
+                var frutaRemover = prompt("Digite o nome da fruta que será removida da lista:");
+
+                if (frutas.includes(frutaRemover)) {
+                    frutas.splice(frutas.indexOf(frutaRemover), 1);
+                    alert("Fruta removida da lista.");
+                } else {
+                    alert("Essa fruta não está na nossa lista de compras.");
+                }
+            }
+            alert("Lista de compras finalizada!");
+        }
+        listaDeCompras();
+        
+    </script>
+</body>
+</html>
